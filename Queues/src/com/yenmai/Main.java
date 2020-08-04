@@ -33,8 +33,20 @@ public class Main {
         myQueues.dequeue();
         myQueues.enqueue(60);
 
-
         myQueues.print();
+
+        // QUEUES WITH TWO STACK
+        QueueWithTwoStack myStackQueue = new QueueWithTwoStack();
+
+        myStackQueue.enqueue(10);
+        myStackQueue.enqueue(20);
+        myStackQueue.enqueue(30);
+        myStackQueue.enqueue(40);
+
+        System.out.println( myStackQueue.dequeue());
+        System.out.println( myStackQueue.dequeue());
+        System.out.println( myStackQueue.dequeue());
+
     }
 
     public static void reverse(Queue<Integer> queue) {
