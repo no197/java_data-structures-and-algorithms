@@ -169,8 +169,26 @@ public class BinaryTree {
                 && isBST(node.rightChild, node.value, upper);
     }
 
+    public void printNodeAtDistance(int distance){
+        printNodeAtDistance(root, distance);
+    }
 
+    public void printNodeAtDistance(Node root, int distance){
+        if (root == null) return;
 
+        if(distance == 0) {
+            System.out.println(root.value);
+            return;
+        }
+        printNodeAtDistance(root.leftChild, distance -1);
+        printNodeAtDistance(root.rightChild, distance -1);
+    }
+
+    public void traverseLevelOrder() {
+        for (int i = 0; i <= height(); i++) {
+            printNodeAtDistance(i);
+        }
+    }
 
 
 }

@@ -23,7 +23,10 @@ public class Main {
 
         System.out.println(tree.isBST());
 
-        System.out.println(tree.height());
+//        System.out.println(tree.height());
+
+//        tree.printNodeAtDistance(1);
+        tree.traverseLevelOrder();
     }
 
 
